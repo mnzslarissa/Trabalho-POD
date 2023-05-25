@@ -1,0 +1,8 @@
+for (k = 2; k <= n; k *= 2) 
+        for (j = k/2; j > 0; j /= 2) 
+            for (i = 0; i < n; i++)
+                l = bitwiseXOR (i, j); // in C-like languages this is "i ^ j"
+                if (l > i)
+                    if (  (bitwiseAND (i, k) == 0) AND (arr[i] > arr[l])
+                       OR (bitwiseAND (i, k) != 0) AND (arr[i] < arr[l]) )
+                          swap the elements arr[i] and arr[l]
